@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const currentYear = new Date().getFullYear()
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +17,7 @@ function App() {
 
       <Content nome="João" />
 
-      <Footer year="1999" />
+      <Footer currentYear={currentYear} />
     </div>
   );
 }
