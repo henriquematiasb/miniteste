@@ -15,7 +15,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
 
-      <Content nome="João" />
+      <Content name="João" />
 
       <Footer currentYear={currentYear} />
     </div>

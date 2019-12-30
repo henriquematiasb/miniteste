@@ -1,13 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export function Content(props) {
+export function Content({ name }) {
   
   const fontSize = 36;
-  const a = '*';
 
   return (
     <div style={{ color: 'white', fontSize: fontSize }}>
-      Parabéns { a  }, você finalizou o seu mini-teste.
+      Parabéns { name }, você finalizou o seu mini-teste.
     </div>
   );
+}
+
+Content.propTypes = {
+  name: PropTypes.string,
 }

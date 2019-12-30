@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export function Footer({ currentYear }) {
 
@@ -7,4 +8,8 @@ export function Footer({ currentYear }) {
       Aqui temos um footer, { currentYear }
     </footer>
   );
+}
+
+Footer.propTypes = {
+  currentYear: PropTypes.number
 }
