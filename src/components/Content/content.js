@@ -1,7 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 
-export function Content({ name }) {
+export function Content({ name, setName }) {
+
+  useEffect(() => {
+    function insertName() {
+      setTimeout(() => {
+        setName('João')
+      }, 5000)
+    }
+
+    insertName()
+  }, [setName])
   
   const fontSize = 36;
 
@@ -14,4 +24,5 @@ export function Content({ name }) {
 
 Content.propTypes = {
   name: PropTypes.string,
+  setName: PropTypes.func,
 }
