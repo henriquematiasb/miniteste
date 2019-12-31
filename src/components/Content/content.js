@@ -1,28 +1,29 @@
 import React, {useEffect} from 'react';
-import PropTypes from 'prop-types';
+import {connect, useSelector, useDispatch} from 'react-redux';
 
-export function Content({ name, setName }) {
+import { addNameCandidate } from '../../store/modules/candidate/actions';
+
+function Content() {
+  const dispatch = useDispatch()
+  const candidate = useSelector(state => state.candidate)
 
   useEffect(() => {
-    function insertName() {
+    function handleGetCandidateName() {
       setTimeout(() => {
-        setName('João')
-      }, 5000)
+        dispatch(addNameCandidate())
+      }, 20000)
     }
 
-    insertName()
-  }, [setName])
+    handleGetCandidateName()
+  }, [dispatch])
   
   const fontSize = 36;
 
   return (
     <div style={{ color: 'white', fontSize: fontSize }}>
-      Parabéns { name }, você finalizou o seu mini-teste.
+      Parabéns { candidate.name}, você finalizou o seu mini-teste.
     </div>
   );
 }
 
-Content.propTypes = {
-  name: PropTypes.string,
-  setName: PropTypes.func,
-}
+export default connect()(Content)
