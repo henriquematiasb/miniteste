@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Provider} from 'react-redux';
 import logo from './logo.jpeg';
 
@@ -10,8 +10,6 @@ import './App.css';
 import store from './store';
 
 function App() {
-  const [currentYear] = useState(new Date().getFullYear())
-
   return (
     <Provider store={store}>
       <div className="App">
@@ -21,7 +19,7 @@ function App() {
 
         <Content />
 
-        <Footer currentYear={currentYear} />
+        <Footer />
       </div>
     </Provider>
   );
