@@ -1,21 +1,15 @@
-## Pontuação 1:
+## Note: The scores have been separated into specific branchs in the following order:
+### 1 - feat / score-one
+### 2 - feat / score-two
+### 3 - feat / score-three
+### 4 - feat / extra-score
 
-### Resolver todos os problemas no projeto para que o mesmo atinja esse estado:
+## Score 1:
 
-### Objetivos:
+### Solve all problems in the project so that it reaches this state:
 
-* O ano deverá ser obtido de forma dinâmica
-* Deverá haver uma verificação se os props passados para os componentes sejam válidos
-* Não deverá haver nenhum warning relacionado a variáveis não utilizadas.
+### Goals:
 
-## Pontuação 2:
-
-Utilize estados (useState) para armazenar as variáveis identificadas nos components, configure um temporizador que executa antes da montagem do componente (useEffect) e ao final de 5 segundo exibe o seu nome na frase “Parabéns …, você finalizou o seu teste”
-
-## Pontuação 3:
-
-Conecte a aplicação ao Redux e armazene o nome do candidato em um estado, utilize o temporizador de 20 segundos para exibir o seu nome na frase “Parabéns …, você finalizou o seu teste”, desenvolva todo o processo utilizando actions e selectors.
-
-### Pontuação Extra:
-
-Estruture a aplicação utilizando conceitos do SOLID Principles, comente os conceitos utilizados.
+* Year to be obtained dynamically
+* There should be a check if the props passed to the components are valid.
+* There should be no warning related to unused variables.
