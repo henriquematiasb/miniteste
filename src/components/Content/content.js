@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import {connect, useSelector, useDispatch} from 'react-redux';
 
-import { addNameCandidate } from '../../store/modules/candidate/actions';
+import {addNameCandidate} from '../../store/modules/candidate/actions';
+
+import './content.css';
 
 function Content() {
   const dispatch = useDispatch()
@@ -17,11 +19,9 @@ function Content() {
     handleGetCandidateName()
   }, [dispatch])
   
-  const fontSize = 36;
-
   return (
-    <div style={{ color: 'white', fontSize: fontSize }}>
-      Parabéns { candidate.name}, você finalizou o seu mini-teste.
+    <div className="Content-container">
+      Parabéns {candidate.name}, você finalizou o seu mini-teste.
     </div>
   );
 }
